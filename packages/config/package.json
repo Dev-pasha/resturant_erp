@@ -1,0 +1,16 @@
+{
+  "name": "@erp/config",
+  "version": "0.0.0",
+  "private": true,
+  "files": ["tsconfig.base.json", "eslint.mjs", "tailwind-preset.cjs"],
+  "exports": {
+    "./tsconfig.base.json": "./tsconfig.base.json",
+    "./eslint": "./eslint.mjs",
+    "./tailwind-preset": "./tailwind-preset.cjs"
+  },
+  "dependencies": {
+    "@eslint/js": "^9.15.0",
+    "eslint": "^9.15.0",
+    "typescript-eslint": "^8.15.0"
+  }
+}
