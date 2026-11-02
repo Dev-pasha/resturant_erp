@@ -8,3 +8,6 @@ coverage
 *.log
 .DS_Store
 apps/web/dev-dist
+
+*.tsbuildinfo
+next-env.d.ts
