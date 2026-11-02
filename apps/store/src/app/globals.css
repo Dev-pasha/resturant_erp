@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Placeholder defaults only; real values are injected per tenant from branding settings (PRD §14). */
+:root {
+  --brand-primary: #1f2937;
+  --brand-primary-hover: #111827;
+  --brand-primary-fg: #ffffff;
+  --brand-secondary: #4b5563;
+  --brand-accent: #d97706;
+  --surface: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --radius: 0.5rem;
+  --font-body: system-ui, sans-serif;
+  --font-heading: system-ui, sans-serif;
+}
+
+body {
+  @apply bg-surface font-body text-content;
+}
