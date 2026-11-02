@@ -31,5 +31,24 @@ These files are the specification for building the Restaurant ERP with Claude Co
 - Hosting (VPS provider) and object storage (Cloudflare R2 or S3)
 - Whether clients need tax authority (PRA/FBR) POS integration, and get the official integration spec
 
+## Local development
+
+```
+pnpm install
+cp .env.example .env
+docker compose -f infra/docker-compose.dev.yml up -d   # postgres :5433, redis :6380
+pnpm db:migrate
+pnpm dev
+```
+
+| App | URL |
+|---|---|
+| API | http://localhost:3000/health |
+| Staff app (web) | http://localhost:5173 |
+| Storefront | http://localhost:3001 |
+| Print agent | http://localhost:3002/health |
+
+Checks: `pnpm lint && pnpm typecheck && pnpm test`.
+
 ## Demo logins (after seeding)
 Documented here by Claude Code once Milestone 0–1 seed exists.
